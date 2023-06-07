@@ -18,8 +18,8 @@ spec:
     blueGreen:
       activeService: {{ template "helm-guestbook.fullname" . }}
       previewService: {{ template "helm-guestbook.fullname" . }}-preview
-      autoPromotionEnabled: false
-      scaleDownDelaySeconds: 180
+      autoPromotionEnabled: true
+      scaleDownDelaySeconds: 120
   template:
     metadata:
       labels:
